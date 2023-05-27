@@ -1,13 +1,8 @@
 import { cleaning } from "@/assets/Images";
-import Image, {StaticImageData} from "next/image";
+import Image from "next/image";
+import { ServiceType } from "@/types";
 
-type Service = {
-    service:string;
-    image: StaticImageData;
-    request:number
-}
-
-const Review = ({services}: {services :Service}) => {
+const Service = ({services}: {services :ServiceType}) => {
     const {image, service, request} = services
   return (
     <div className="mr-5 flex flex-col items-center text-[14px] text-[#484848]" >
@@ -21,4 +16,4 @@ const Review = ({services}: {services :Service}) => {
   );
 };
 
-export default Review;
+export default Service;

@@ -22,23 +22,15 @@ const FAQ = () => {
       setExpanded(isExpanded ? panel : false);
     };
 
-  //array to create six faq questions instead of manually writing it out
-  const questions = [
-    "What do you need to become a HelpInc?",
-    "How do I get a job?",
-    "Do I need experience for the task?",
-    "How long does it take to process my registration?",
-    "How will I get the money?",
-    "What categories of tasks can I perform on TaskRabbit?",
-  ];
+  
   return (
-    <div className='w-full flex flex-col items-center my-10'>
-      <p className="text-center text-[#2B4E8C] text-sm font-bold">Question</p>
+    <div className='w-full flex flex-col items-center my-14'>
+      <p className="text-center text-primary text-sm font-bold">Question</p>
       <p className="text-center font-raleway font-bold text-xl">
         Frequently asked questions
       </p>
-      <div className="mt-10 flex w-[80%] ">
-        <div className='mr-5'>
+      <div className="my-10 flex flex-col md:flex-row md:w-[80%] ">
+        <div className='md:mr-5'>
           <Accordion
             expanded={expanded === `panel1`}
             onChange={handleChange(`panel1`)}
@@ -60,7 +52,7 @@ const FAQ = () => {
               </p>
             </AccordionSummary>
             <AccordionDetails>
-              <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+              <p className="accordion_details">
                 Once you complete registration steps including creating your
                 Tasker profile, make sure you draw your work area map and set
                 schedule availability to show up in Client search results. If
@@ -90,7 +82,7 @@ const FAQ = () => {
               <p className="font-bold text-sm">How do I get a job?</p>
             </AccordionSummary>
             <AccordionDetails>
-              <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+              <p className="accordion_details">
                 Once you complete registration steps including creating your
                 Tasker profile, make sure you draw your work area map and set
                 schedule availability to show up in Client search results. If
@@ -122,7 +114,7 @@ const FAQ = () => {
               </p>
             </AccordionSummary>
             <AccordionDetails>
-              <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+              <p className="accordion_details">
                 Once you complete registration steps including creating your
                 Tasker profile, make sure you draw your work area map and set
                 schedule availability to show up in Client search results. If
@@ -157,7 +149,7 @@ const FAQ = () => {
                 </p>
               </AccordionSummary>
               <AccordionDetails>
-                <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+                <p className="accordion_details">
                   Once you complete registration steps including creating your
                   Tasker profile, make sure you draw your work area map and set
                   schedule availability to show up in Client search results. If
@@ -187,7 +179,7 @@ const FAQ = () => {
                 <p className="font-bold text-sm">How will I get the money?</p>
               </AccordionSummary>
               <AccordionDetails>
-                <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+                <p className="accordion_details">
                   Once you complete registration steps including creating your
                   Tasker profile, make sure you draw your work area map and set
                   schedule availability to show up in Client search results. If
@@ -219,7 +211,7 @@ const FAQ = () => {
                 </p>
               </AccordionSummary>
               <AccordionDetails>
-                <p className="text-[#a1a1a1] text-[8px] md:text-base text-center">
+                <p className="accordion_details">
                   Once you complete registration steps including creating your
                   Tasker profile, make sure you draw your work area map and set
                   schedule availability to show up in Client search results. If

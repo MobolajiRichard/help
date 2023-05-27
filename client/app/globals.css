@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .footer_about{
+    @apply hover:text-black cursor-pointer
+  }
+
+  .accordion_details{
+    @apply text-[#a1a1a1] text-[8px] md:text-base text-center
+  }
+
+  .contact_input{
+    @apply border-2 rounded-[20px] border-grey-500 p-4 flex items-center mb-3 shadow-md
+  }
+}
 
 .slick-dots li.slick-active button::before{
    background-color: #03C3DE !important;

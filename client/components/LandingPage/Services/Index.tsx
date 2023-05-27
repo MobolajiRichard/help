@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Review from "./Service";
+import Service from "./Service";
 import {
   cleaning,
   electrician,
@@ -14,43 +12,11 @@ import {
   home_repair,
   photography,
 } from "@/assets/Images";
+import { carousel_settings } from "@/utils";
 
-const Service = () => {
-  let settings = {
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+
+const Services = () => {
+  let carouselSettings = { ...carousel_settings, slidesToSHow: 4, dots: false };
   const services = [
     {
       service: "Cleaning",
@@ -99,20 +65,20 @@ const Service = () => {
     },
   ];
   return (
-    <div className="mt-10">
-      <p className="text-center text-[#2B4E8C] font-bold">Popular</p>
+    <div className="my-10">
+      <p className="text-center text-primary font-bold">Popular</p>
       <div className="flex flex-col md:flex-row items-center w-full justify-between mb-6">
-        <p ></p>
+        <p></p>
         <p className=" font-raleway text-center text-2xl font-bold">
           Popular services
         </p>
-        <p className="text-xl font-bold text-[#2B4E8C]">10 options</p>
+        <p className="text-xl font-bold text-primary">10 options</p>
       </div>
 
-      <Slider adaptiveHeight={false} {...settings}>
+      <Slider adaptiveHeight={false} {...carouselSettings}>
         {services.map((s, i) => (
           <div className="mr-2" key={i}>
-            <Review services={s} />
+            <Service services={s} />
           </div>
         ))}
       </Slider>
@@ -120,4 +86,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Services;

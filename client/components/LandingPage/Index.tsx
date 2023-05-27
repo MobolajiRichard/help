@@ -5,21 +5,23 @@ import Header from "../Header";
 import Footer from "../Footer";
 import DownloadButton from "../DownloadButton";
 import Image from "next/image";
-import { Rating } from "@/Utils";
+import { Rating } from "@/utils";
 import { preview, garden } from "@/assets/Images";
 import Reviews from "./Reviews/Index";
 import Services from "./Services/Index";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Index = () => {
   return (
-    <div className="bg-white h-full font-montserrat px-[5%] pt-10">
+    <div className="bg-white h-full w-full font-montserrat px-[5%] pt-10">
       <Header />
-      <div className="flex mt-16 w-full justify-between items-center">
-        <div className="">
+      <div className="flex mt-16 mb-6  w-full justify-between items-center">
+        <div className="flex flex-col items-center md:items-start">
           <p className="font-raleway text-5xl font-bold">
             Revolutionizing <p>Everyday Work</p>{" "}
           </p>
-          <p className="font-bold mb-1 mt-4">
+          <p className="font-bold mb-1 mt-4 text-center md:text-start">
             Everyday work is important, but it’s also time consuming.{" "}
             <p>We can help.</p>
           </p>
@@ -32,9 +34,9 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
+        <div className="hidden md:flex">
           <div className="flex flex-col items-end mr-6 pt-4">
-            <div className=" font-raleway text-xl bg-[#2B4E8C] rounded-[20px] text-white h-1/3 w-2/3 flex flex-col items-center justify-center mb-4">
+            <div className=" font-raleway text-xl bg-primary rounded-[20px] text-white h-1/3 w-2/3 flex flex-col items-center justify-center mb-4">
               <p>+1500</p>
               <p className="opacity-80">Helpers</p>
             </div>

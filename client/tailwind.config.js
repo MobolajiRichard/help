@@ -11,6 +11,9 @@ module.exports = {
         raleway: ["Raleway", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      colors:{
+        primary:'#2B4E8C'
+      }
     },
   },
   plugins: [],

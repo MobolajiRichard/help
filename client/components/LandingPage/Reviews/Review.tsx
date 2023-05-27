@@ -1,15 +1,9 @@
 import { seema } from "@/assets/Images";
 import Image, { StaticImageData } from "next/image";
 import { Avatar } from "@mui/material";
-import { Rating } from "@/Utils";
+import { Rating } from "@/utils";
+import { Review } from "@/types";
 
-type Review = {
-  name: string;
-  date: string;
-  ratings: number;
-  image: StaticImageData;
-  desc: string;
-};
 
 const Review = ({ review }: { review: Review }) => {
   const { name, date, ratings, image, desc } = review;
