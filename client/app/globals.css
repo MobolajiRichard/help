@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.navcar {
-  color: #0e0e0e80;
+
+.slick-dots li.slick-active button::before{
+   background-color: #03C3DE !important;
+   border:none;
 }
+
+.slick-dots li button::before{
+  font-size: 100% !important;
+  width: 14px !important;
+  height: 14px !important;
+  border: 0.578378px solid #2B4E8C;
+  border-radius:50%
+}
+
