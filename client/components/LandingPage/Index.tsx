@@ -1,4 +1,3 @@
-"use client";
 
 import Contact from "./Contact";
 import FAQ from "./FAQ";
