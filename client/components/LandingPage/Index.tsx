@@ -1,3 +1,5 @@
+"use client";
+
 import Contact from "./Contact";
 import FAQ from "./FAQ";
 import OurApp from "./OurApp";
@@ -15,7 +17,7 @@ import "slick-carousel/slick/slick-theme.css";
 const Index = () => {
   return (
     <div className="bg-white h-full w-full font-montserrat px-[5%] pt-10">
-      <Header />
+      <Header/>
       <div className="flex mt-16 mb-6  w-full justify-between items-center">
         <div className="flex flex-col items-center md:items-start">
           <p className="font-raleway text-5xl font-bold">
@@ -50,7 +52,7 @@ const Index = () => {
       <FAQ />
       <Contact />
       <Reviews />
-      <Footer />
+      <Footer/>
     </div>
   );
 };
